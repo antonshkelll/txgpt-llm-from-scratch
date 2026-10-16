@@ -1,0 +1,7 @@
+{
+  "tfidf_latency_ms_per_tx": 0.048,
+  "tfidf_weights": 1250775,
+  "txgpt_latency_ms_per_tx": 17.46,
+  "txgpt_params": 2022528,
+  "speedup": 364
+}

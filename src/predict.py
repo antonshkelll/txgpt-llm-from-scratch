@@ -30,6 +30,8 @@ def main():
     p.add_argument("texts", nargs="*")
     p.add_argument("--generate", type=int, default=0)
     a = p.parse_args()
+    if hasattr(sys.stdout, "reconfigure"):          # консоль Windows по умолчанию не в UTF-8
+        sys.stdout.reconfigure(encoding="utf-8")
     if a.generate:
         tok, model = load("pretrained.pt")
         out = model.generate(torch.full((a.generate, 1), BOS), max_new=30, stop_token=EOS)

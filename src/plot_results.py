@@ -9,8 +9,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 REP = Path(__file__).resolve().parents[1] / "reports"
-r = json.loads((REP / "results.json").read_text())["budgets"]
-p = json.loads((REP / "probe_results.json").read_text())
+r = json.loads((REP / "results.json").read_text(encoding="utf-8"))["budgets"]
+p = json.loads((REP / "probe_results.json").read_text(encoding="utf-8"))
 models = [("baseline_tfidf_logreg", "TF-IDF + LogReg", "#9aa0a6", r),
           ("gpt_from_scratch", "GPT без предобучения", "#F2CF5B", r),
           ("gpt_pretrained", "TxGPT: предобучение + дообучение", "#E45756", r),
