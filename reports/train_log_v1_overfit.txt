@@ -1,0 +1,32 @@
+labeled=30,000 pretrain_texts=120,000 test_seen=3,000 test_unseen=3,000
+BPE vocab=1200 | «Перевод по номеру телефона +7 9** ***-15-82 Ксения К.» → ['▁Перевод', '▁по', '▁номеру', '▁телефона', '▁+7', '▁9**', '▁***-', '15', '-', '82', '▁Ксения', '▁К.']
+GPT params: 2.02M
+  [pretrain] step 250/3000  loss 4.429  (25s)
+  [pretrain] step 500/3000  loss 2.790  (53s)
+  [pretrain] step 750/3000  loss 2.451  (83s)
+  [pretrain] step 1000/3000  loss 2.287  (108s)
+  [pretrain] step 1250/3000  loss 2.203  (135s)
+  [pretrain] step 1500/3000  loss 2.122  (160s)
+  [pretrain] step 1750/3000  loss 2.071  (185s)
+  [pretrain] step 2000/3000  loss 2.034  (211s)
+  [pretrain] step 2250/3000  loss 1.998  (235s)
+  [pretrain] step 2500/3000  loss 1.974  (261s)
+  [pretrain] step 2750/3000  loss 1.949  (286s)
+  [pretrain] step 3000/3000  loss 1.956  (310s)
+pretrain: {'steps': 3000, 'final_loss': 1.956, 'ppl_random_init': 1214.5, 'ppl_seen': 6.91, 'ppl_unseen': 48.62}
+samples:
+  Оплата СБП ООО «Кухня на районе»
+  PRODUKTY МИРРА 27 ЕКАТЕРИНБУРГ
+  Оплата СБП ИП Морозов А.М. (интернет-магазин)
+  TRANSPORT СОЛРО 623 НОВОСИБИРС
+  Оплата СБП ИП Соколов А.О. (провайдер)
+  shell 41804 perm rus
+  Оплата СБП АО «Петроэлектросбыт»
+  ЭНЕРГОСБЫТ ЛИВЕЛАН 539 ВОРОНЕЖ
+  [gpt_from_scratch/1000] step 400/800  loss 0.434  (59s)
+  [gpt_from_scratch/1000] step 800/800  loss 0.002  (117s)
+  [gpt_pretrained/1000] step 400/800  loss 0.324  (57s)
+  [gpt_pretrained/1000] step 800/800  loss 0.001  (112s)
+budget=1000: {"baseline_tfidf_logreg": {"seen": {"accuracy": 0.909, "macro_f1": 0.9088, "coverage_at_95": 0.9307}, "unseen": {"accuracy": 0.4363, "macro_f1": 0.423, "coverage_at_95": 0.25}}, "gpt_from_scratch": {"seen": {"accuracy": 0.726, "macro_f1": 0.7255, "coverage_at_95": 0.5497}, "unseen": {"accuracy": 0.322, "macro_f1": 0.3091, "coverage_at_95": 0.0817}}, "gpt_pretrained": {"seen": {"accuracy": 0.7557, "macro_f1": 0.7555, "coverage_at_95": 0.661}, "unseen": {"accuracy": 0.2917, "macro_f1": 0.2905, "coverage_at_95": 0.1223}}}
+  [gpt_from_scratch/30000] step 1000/2000  loss 0.293  (140s)
+  [gpt_from_scratch/30000] step 2000/2000  loss 0.010  (283s)

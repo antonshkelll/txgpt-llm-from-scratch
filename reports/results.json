@@ -1,0 +1,108 @@
+{
+  "config": {
+    "vocab_size": 1200,
+    "block_size": 64,
+    "n_layer": 4,
+    "n_head": 4,
+    "n_embd": 192,
+    "dropout": 0.1
+  },
+  "budgets": {
+    "1000": {
+      "baseline_tfidf_logreg": {
+        "seen": {
+          "accuracy": 0.901,
+          "macro_f1": 0.8993,
+          "coverage_at_95": 0.923
+        },
+        "unseen": {
+          "accuracy": 0.5497,
+          "macro_f1": 0.5328,
+          "coverage_at_95": 0.3623
+        }
+      },
+      "gpt_from_scratch": {
+        "seen": {
+          "accuracy": 0.6943,
+          "macro_f1": 0.693,
+          "coverage_at_95": 0.4217
+        },
+        "unseen": {
+          "accuracy": 0.3927,
+          "macro_f1": 0.3836,
+          "coverage_at_95": 0.1307
+        }
+      },
+      "gpt_pretrained": {
+        "seen": {
+          "accuracy": 0.739,
+          "macro_f1": 0.7342,
+          "coverage_at_95": 0.5943
+        },
+        "unseen": {
+          "accuracy": 0.392,
+          "macro_f1": 0.3798,
+          "coverage_at_95": 0.1807
+        }
+      }
+    },
+    "30000": {
+      "baseline_tfidf_logreg": {
+        "seen": {
+          "accuracy": 0.9907,
+          "macro_f1": 0.9907,
+          "coverage_at_95": 1.0
+        },
+        "unseen": {
+          "accuracy": 0.6027,
+          "macro_f1": 0.5905,
+          "coverage_at_95": 0.568
+        }
+      },
+      "gpt_from_scratch": {
+        "seen": {
+          "accuracy": 0.9777,
+          "macro_f1": 0.9775,
+          "coverage_at_95": 1.0
+        },
+        "unseen": {
+          "accuracy": 0.5543,
+          "macro_f1": 0.541,
+          "coverage_at_95": 0.359
+        }
+      },
+      "gpt_pretrained": {
+        "seen": {
+          "accuracy": 0.981,
+          "macro_f1": 0.9807,
+          "coverage_at_95": 1.0
+        },
+        "unseen": {
+          "accuracy": 0.547,
+          "macro_f1": 0.537,
+          "coverage_at_95": 0.438
+        }
+      }
+    }
+  },
+  "pretrain": {
+    "steps": 3000,
+    "final_loss": 1.939,
+    "ppl_random_init": 1224.8,
+    "ppl_seen": 7.02,
+    "ppl_unseen": 6.78
+  },
+  "samples": [
+    "Оплата СБП АО «Кухня на районе»",
+    "Оплата СБП ИП «Lime»",
+    "MAKSIM 47575 KAZAN RUS",
+    "QR ПОБЕДА МОСКВАМЬ",
+    "Оплата СБП ИП «Метро»у»",
+    "BILAYN 14594 NIZHNIY NOVGOROD RUS",
+    "ACADEMY БОСОЛ 125 ТВЕРЬ",
+    "ozon 41472 ekaterinburg rus"
+  ],
+  "latency_ms_per_tx_cpu": 17.46,
+  "n_params": 2022528,
+  "train_time_min": 35.4
+}

@@ -1,0 +1,183 @@
+labeled=30,000 pretrain_texts=120,000 test_seen=3,000 test_unseen=3,000
+BPE vocab=1200 | «Перевод по номеру телефона +7 9** ***-47-77 Мария И.» → ['▁Перевод', '▁по', '▁номеру', '▁телефона', '▁+7', '▁9**', '▁***-', '47', '-', '77', '▁Мария', '▁И.']
+GPT params: 2.02M
+  [pretrain] step 250/3000  loss 4.576  (28s)
+  [pretrain] step 500/3000  loss 3.008  (55s)
+  [pretrain] step 750/3000  loss 2.593  (83s)
+  [pretrain] step 1000/3000  loss 2.392  (110s)
+  [pretrain] step 1250/3000  loss 2.273  (138s)
+  [pretrain] step 1500/3000  loss 2.182  (166s)
+  [pretrain] step 1750/3000  loss 2.119  (195s)
+  [pretrain] step 2000/3000  loss 2.058  (221s)
+  [pretrain] step 2250/3000  loss 2.014  (246s)
+  [pretrain] step 2500/3000  loss 1.984  (273s)
+  [pretrain] step 2750/3000  loss 1.969  (300s)
+  [pretrain] step 3000/3000  loss 1.944  (326s)
+pretrain: {'steps': 3000, 'final_loss': 1.939, 'ppl_random_init': 1224.8, 'ppl_seen': 7.02, 'ppl_unseen': 6.78}
+samples:
+  Оплата СБП АО «Кухня на районе»
+  Оплата СБП ИП «Lime»
+  MAKSIM 47575 KAZAN RUS
+  QR ПОБЕДА МОСКВАМЬ
+  Оплата СБП ИП «Метро»у»
+  BILAYN 14594 NIZHNIY NOVGOROD RUS
+  ACADEMY БОСОЛ 125 ТВЕРЬ
+  ozon 41472 ekaterinburg rus
+  [gpt_from_scratch/1000] step 50/600  loss 3.677  val_acc 0.127  (11s)
+  [gpt_from_scratch/1000] step 100/600  loss 0.288  val_acc 0.567  (21s)
+  [gpt_from_scratch/1000] step 150/600  loss 0.048  val_acc 0.580  (31s)
+  [gpt_from_scratch/1000] step 200/600  loss 0.020  val_acc 0.607  (41s)
+  [gpt_from_scratch/1000] step 250/600  loss 0.013  val_acc 0.653  (51s)
+  [gpt_from_scratch/1000] step 300/600  loss 0.006  val_acc 0.680  (61s)
+  [gpt_from_scratch/1000] step 350/600  loss 0.004  val_acc 0.673  (71s)
+  [gpt_from_scratch/1000] step 400/600  loss 0.002  val_acc 0.647  (80s)
+  [gpt_from_scratch/1000] step 450/600  loss 0.001  val_acc 0.660  (90s)
+  [gpt_from_scratch/1000] step 500/600  loss 0.001  val_acc 0.660  (100s)
+  [gpt_from_scratch/1000] step 550/600  loss 0.001  val_acc 0.680  (109s)
+  [gpt_from_scratch/1000] step 600/600  loss 0.000  val_acc 0.687  (119s)
+  [gpt_from_scratch/1000] best val_acc 0.687 at step 600
+  [gpt_pretrained/1000] step 50/600  loss 2.445  val_acc 0.207  (10s)
+  [gpt_pretrained/1000] step 100/600  loss 0.246  val_acc 0.507  (21s)
+  [gpt_pretrained/1000] step 150/600  loss 0.095  val_acc 0.640  (31s)
+  [gpt_pretrained/1000] step 200/600  loss 0.030  val_acc 0.640  (42s)
+  [gpt_pretrained/1000] step 250/600  loss 0.014  val_acc 0.727  (51s)
+  [gpt_pretrained/1000] step 300/600  loss 0.009  val_acc 0.740  (61s)
+  [gpt_pretrained/1000] step 350/600  loss 0.005  val_acc 0.727  (72s)
+  [gpt_pretrained/1000] step 400/600  loss 0.004  val_acc 0.733  (82s)
+  [gpt_pretrained/1000] step 450/600  loss 0.002  val_acc 0.747  (93s)
+  [gpt_pretrained/1000] step 500/600  loss 0.002  val_acc 0.733  (103s)
+  [gpt_pretrained/1000] step 550/600  loss 0.001  val_acc 0.713  (114s)
+  [gpt_pretrained/1000] step 600/600  loss 0.002  val_acc 0.720  (125s)
+  [gpt_pretrained/1000] best val_acc 0.747 at step 450
+budget=1000: {"baseline_tfidf_logreg": {"seen": {"accuracy": 0.901, "macro_f1": 0.8993, "coverage_at_95": 0.923}, "unseen": {"accuracy": 0.5497, "macro_f1": 0.5328, "coverage_at_95": 0.3623}}, "gpt_from_scratch": {"seen": {"accuracy": 0.6943, "macro_f1": 0.693, "coverage_at_95": 0.4217}, "unseen": {"accuracy": 0.3927, "macro_f1": 0.3836, "coverage_at_95": 0.1307}}, "gpt_pretrained": {"seen": {"accuracy": 0.739, "macro_f1": 0.7342, "coverage_at_95": 0.5943}, "unseen": {"accuracy": 0.392, "macro_f1": 0.3798, "coverage_at_95": 0.1807}}}
+  [gpt_from_scratch/30000] step 250/2500  loss 1.485  val_acc 0.887  (54s)
+  [gpt_from_scratch/30000] step 500/2500  loss 0.058  val_acc 0.939  (108s)
+  [gpt_from_scratch/30000] step 750/2500  loss 0.032  val_acc 0.962  (161s)
+  [gpt_from_scratch/30000] step 1000/2500  loss 0.022  val_acc 0.966  (215s)
+  [gpt_from_scratch/30000] step 1250/2500  loss 0.017  val_acc 0.975  (267s)
+  [gpt_from_scratch/30000] step 1500/2500  loss 0.012  val_acc 0.975  (320s)
+  [gpt_from_scratch/30000] step 1750/2500  loss 0.009  val_acc 0.982  (374s)
+  [gpt_from_scratch/30000] step 2000/2500  loss 0.007  val_acc 0.982  (430s)
+  [gpt_from_scratch/30000] step 2250/2500  loss 0.005  val_acc 0.984  (486s)
+  [gpt_from_scratch/30000] step 2500/2500  loss 0.005  val_acc 0.982  (544s)
+  [gpt_from_scratch/30000] best val_acc 0.984 at step 2250
+  [gpt_pretrained/30000] step 250/2500  loss 1.053  val_acc 0.916  (57s)
+  [gpt_pretrained/30000] step 500/2500  loss 0.042  val_acc 0.972  (114s)
+  [gpt_pretrained/30000] step 750/2500  loss 0.020  val_acc 0.980  (171s)
+  [gpt_pretrained/30000] step 1000/2500  loss 0.013  val_acc 0.989  (228s)
+  [gpt_pretrained/30000] step 1250/2500  loss 0.010  val_acc 0.985  (286s)
+  [gpt_pretrained/30000] step 1500/2500  loss 0.007  val_acc 0.990  (342s)
+  [gpt_pretrained/30000] step 1750/2500  loss 0.006  val_acc 0.989  (397s)
+  [gpt_pretrained/30000] step 2000/2500  loss 0.005  val_acc 0.989  (454s)
+  [gpt_pretrained/30000] step 2250/2500  loss 0.004  val_acc 0.990  (510s)
+  [gpt_pretrained/30000] step 2500/2500  loss 0.004  val_acc 0.990  (566s)
+  [gpt_pretrained/30000] best val_acc 0.990 at step 1500
+budget=30000: {"baseline_tfidf_logreg": {"seen": {"accuracy": 0.9907, "macro_f1": 0.9907, "coverage_at_95": 1.0}, "unseen": {"accuracy": 0.6027, "macro_f1": 0.5905, "coverage_at_95": 0.568}}, "gpt_from_scratch": {"seen": {"accuracy": 0.9777, "macro_f1": 0.9775, "coverage_at_95": 1.0}, "unseen": {"accuracy": 0.5543, "macro_f1": 0.541, "coverage_at_95": 0.359}}, "gpt_pretrained": {"seen": {"accuracy": 0.981, "macro_f1": 0.9807, "coverage_at_95": 1.0}, "unseen": {"accuracy": 0.547, "macro_f1": 0.537, "coverage_at_95": 0.438}}}
+{
+  "config": {
+    "vocab_size": 1200,
+    "block_size": 64,
+    "n_layer": 4,
+    "n_head": 4,
+    "n_embd": 192,
+    "dropout": 0.1
+  },
+  "budgets": {
+    "1000": {
+      "baseline_tfidf_logreg": {
+        "seen": {
+          "accuracy": 0.901,
+          "macro_f1": 0.8993,
+          "coverage_at_95": 0.923
+        },
+        "unseen": {
+          "accuracy": 0.5497,
+          "macro_f1": 0.5328,
+          "coverage_at_95": 0.3623
+        }
+      },
+      "gpt_from_scratch": {
+        "seen": {
+          "accuracy": 0.6943,
+          "macro_f1": 0.693,
+          "coverage_at_95": 0.4217
+        },
+        "unseen": {
+          "accuracy": 0.3927,
+          "macro_f1": 0.3836,
+          "coverage_at_95": 0.1307
+        }
+      },
+      "gpt_pretrained": {
+        "seen": {
+          "accuracy": 0.739,
+          "macro_f1": 0.7342,
+          "coverage_at_95": 0.5943
+        },
+        "unseen": {
+          "accuracy": 0.392,
+          "macro_f1": 0.3798,
+          "coverage_at_95": 0.1807
+        }
+      }
+    },
+    "30000": {
+      "baseline_tfidf_logreg": {
+        "seen": {
+          "accuracy": 0.9907,
+          "macro_f1": 0.9907,
+          "coverage_at_95": 1.0
+        },
+        "unseen": {
+          "accuracy": 0.6027,
+          "macro_f1": 0.5905,
+          "coverage_at_95": 0.568
+        }
+      },
+      "gpt_from_scratch": {
+        "seen": {
+          "accuracy": 0.9777,
+          "macro_f1": 0.9775,
+          "coverage_at_95": 1.0
+        },
+        "unseen": {
+          "accuracy": 0.5543,
+          "macro_f1": 0.541,
+          "coverage_at_95": 0.359
+        }
+      },
+      "gpt_pretrained": {
+        "seen": {
+          "accuracy": 0.981,
+          "macro_f1": 0.9807,
+          "coverage_at_95": 1.0
+        },
+        "unseen": {
+          "accuracy": 0.547,
+          "macro_f1": 0.537,
+          "coverage_at_95": 0.438
+        }
+      }
+    }
+  },
+  "pretrain": {
+    "steps": 3000,
+    "final_loss": 1.939,
+    "ppl_random_init": 1224.8,
+    "ppl_seen": 7.02,
+    "ppl_unseen": 6.78
+  },
+  "samples": [
+    "Оплата СБП АО «Кухня на районе»",
+    "Оплата СБП ИП «Lime»",
+    "MAKSIM 47575 KAZAN RUS",
+    "QR ПОБЕДА МОСКВАМЬ",
+    "Оплата СБП ИП «Метро»у»",
+    "BILAYN 14594 NIZHNIY NOVGOROD RUS",
+    "ACADEMY БОСОЛ 125 ТВЕРЬ",
+    "ozon 41472 ekaterinburg rus"
+  ],
+  "latency_ms_per_tx_cpu": 17.46,
+  "n_params": 2022528,
+  "train_time_min": 35.4
+}

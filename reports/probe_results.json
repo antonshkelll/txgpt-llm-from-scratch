@@ -1,0 +1,78 @@
+{
+  "1000": {
+    "probe_random_init": {
+      "seen": {
+        "accuracy": 0.4257,
+        "macro_f1": 0.4182,
+        "coverage_at_95": 0.002
+      },
+      "unseen": {
+        "accuracy": 0.2467,
+        "macro_f1": 0.2308,
+        "coverage_at_95": 0.008
+      }
+    },
+    "probe_pretrained": {
+      "seen": {
+        "accuracy": 0.605,
+        "macro_f1": 0.5983,
+        "coverage_at_95": 0.0293
+      },
+      "unseen": {
+        "accuracy": 0.3407,
+        "macro_f1": 0.3264,
+        "coverage_at_95": 0.029
+      }
+    },
+    "hybrid_tfidf_plus_gpt": {
+      "seen": {
+        "accuracy": 0.8497,
+        "macro_f1": 0.8466,
+        "coverage_at_95": 0.8
+      },
+      "unseen": {
+        "accuracy": 0.489,
+        "macro_f1": 0.4783,
+        "coverage_at_95": 0.232
+      }
+    }
+  },
+  "30000": {
+    "probe_random_init": {
+      "seen": {
+        "accuracy": 0.654,
+        "macro_f1": 0.6458,
+        "coverage_at_95": 0.285
+      },
+      "unseen": {
+        "accuracy": 0.332,
+        "macro_f1": 0.3135,
+        "coverage_at_95": 0.095
+      }
+    },
+    "probe_pretrained": {
+      "seen": {
+        "accuracy": 0.8457,
+        "macro_f1": 0.8419,
+        "coverage_at_95": 0.659
+      },
+      "unseen": {
+        "accuracy": 0.398,
+        "macro_f1": 0.3848,
+        "coverage_at_95": 0.101
+      }
+    },
+    "hybrid_tfidf_plus_gpt": {
+      "seen": {
+        "accuracy": 0.9897,
+        "macro_f1": 0.9896,
+        "coverage_at_95": 1.0
+      },
+      "unseen": {
+        "accuracy": 0.6,
+        "macro_f1": 0.591,
+        "coverage_at_95": 0.5573
+      }
+    }
+  }
+}
