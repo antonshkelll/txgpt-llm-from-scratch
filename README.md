@@ -1,5 +1,7 @@
 # TxGPT
 
+[![CI](https://github.com/antonshkelll/txgpt-llm-from-scratch/actions/workflows/ci.yml/badge.svg)](https://github.com/antonshkelll/txgpt-llm-from-scratch/actions/workflows/ci.yml) ![Python](https://img.shields.io/badge/Python-3.12-3776AB) ![License](https://img.shields.io/badge/license-MIT-lightgrey)
+
 Небольшая языковая модель архитектуры GPT, написанная с нуля на PyTorch: свой BPE-токенизатор, self-attention, предобучение на неразмеченных описаниях банковских операций и дообучение на задачу «описание → категория траты». Модель сравнивается с классическим бейзлайном, чтобы ответить на продуктовый вопрос: когда языковая модель действительно нужна, а когда нет.
 
 <p align="center"><img src="reports/accuracy.png" width="720" alt="Сравнение моделей"></p>
@@ -126,3 +128,10 @@ python src/train.py
 ## Стек
 
 PyTorch (свой трансформер, без HuggingFace) · BPE с нуля · scikit-learn (бейзлайн, linear probe) · NumPy · matplotlib
+
+## Связанные проекты
+
+- [Экономика быстрого платежа](https://github.com/antonshkelll/sbp-economics) — почему у СБП-платежей нет MCC и растёт их доля
+- [finpilot](https://github.com/antonshkelll/finpilot-mcp) — аналитика выписки для AI-ассистентов
+
+Все проекты — в [профиле](https://github.com/antonshkelll).
