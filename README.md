@@ -83,12 +83,14 @@ ACADEMY БОСОЛ 125 ТВЕРЬ
 ## Демо
 
 ```bash
-python src/predict.py "ВКУСНО И ТОЧКА 0453 МОСКВА" "Оплата СБП ИП Петров А.В. (барбершоп)" "YANDEX*GO 7781"
+python src/predict.py "ВКУСНО И ТОЧКА 0453 МОСКВА" \
+  "Оплата СБП ИП Петров А.В. (барбершоп)" "YANDEX*GO 7781"
 # 'ВКУСНО И ТОЧКА 0453 МОСКВА'            → Фастфуд и доставка (100%)
 # 'Оплата СБП ИП Петров А.В. (барбершоп)' → Красота (100%)
 # 'YANDEX*GO 7781'                        → Такси (99%)
 
-python src/predict.py --generate 5     # модель сама генерирует строки выписки
+# модель сама генерирует строки выписки
+python src/predict.py --generate 5
 ```
 
 ## Запуск
@@ -101,12 +103,17 @@ macOS / Linux:
 git clone https://github.com/antonshkelll/txgpt-llm-from-scratch.git
 cd txgpt-llm-from-scratch
 python3 -m venv .venv && source .venv/bin/activate
-pip install torch --index-url https://download.pytorch.org/whl/cpu   # на macOS достаточно: pip install torch
+# на macOS достаточно: pip install torch
+pip install torch --index-url https://download.pytorch.org/whl/cpu
 pip install -r requirements.txt
-pytest -q                    # быстрые тесты: токенизатор, causal-маска, обучение на мини-батче
-python src/train.py          # ~35 мин на 4 ядрах: токенизатор, предобучение, дообучение, сравнение
-python src/probe.py          # ~2 мин: linear probe и гибрид
-python src/plot_results.py   # график reports/accuracy.png
+# быстрые тесты: токенизатор, causal-маска, обучение на мини-батче
+pytest -q
+# ~35 мин на 4 ядрах: токенизатор, предобучение, дообучение, сравнение
+python src/train.py
+# ~2 мин: linear probe и гибрид
+python src/probe.py
+# график reports/accuracy.png
+python src/plot_results.py
 ```
 
 Windows (PowerShell):
@@ -133,7 +140,8 @@ PyTorch (свой трансформер, без HuggingFace) · BPE с нуля
 
 ## Связанные проекты
 
-- [Экономика быстрого платежа](https://github.com/antonshkelll/sbp-economics): почему у СБП-платежей нет MCC и растёт их доля ([калькулятор](https://sbp.antonshkel.ru))
+- [Экономика быстрого платежа](https://github.com/antonshkelll/sbp-economics): почему у СБП-платежей нет MCC и растёт их доля ([калькулятор](https://antonshkelll.github.io/sbp-economics/))
 - [finpilot](https://github.com/antonshkelll/finpilot-mcp): аналитика выписки для AI-ассистентов
 
 Все проекты собраны в [профиле](https://github.com/antonshkelll).
+
